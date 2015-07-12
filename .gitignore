@@ -3,5 +3,7 @@
 .classpath
 .project
 .idea/
-
-/angularjs-springmvc-sample.iml
+*.log*
+*.iml
+licenseheader.txt
+nb-configuration.xml
