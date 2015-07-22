@@ -34,6 +34,6 @@ An example application using AnguarJS/Bootstrap as frontend and Spring MVC as RE
 
    3. Go to [http://localhost:8080/angularjs-springmvc-sample/](http://localhost:8080/angularjs-springmvc-sample/) to test it. If you want to explore the REST API docs online, there is a *Swagger UI* configured for visualizing the REST APIs, just go to [http://localhost:8080/angularjs-springmvc-sample/swagger-ui.html](http://localhost:8080/angularjs-springmvc-sample/swagger-ui.html).
 
+## Spring Boot
 
-
-*The detailed steps will be added in the wiki pages of this project soon.*
+There is a `boot` branch available for Spring Boot user, clone the codes and switch to `boot` to try it.
