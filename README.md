@@ -36,4 +36,4 @@ An example application using AnguarJS/Bootstrap as frontend and Spring MVC as RE
 
 ## Spring Boot
 
-There is a `boot` branch available for Spring Boot user, clone the codes and switch to `boot` to try it.
+There is a `boot` branch available for Spring Boot user, clone the codes and switch to `boot` branch and try it.
