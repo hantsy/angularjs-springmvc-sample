@@ -21,11 +21,7 @@ public class PostDetails implements Serializable {
 
     private String content;
 
-    private SimpleUserDetails createdBy;
-
     private Date createdDate;
-
-    private SimpleUserDetails lastModifiedBy;
 
     private Date lastModifiedDate;
 
@@ -53,13 +49,6 @@ public class PostDetails implements Serializable {
         this.content = content;
     }
 
-    public SimpleUserDetails getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(SimpleUserDetails createdBy) {
-        this.createdBy = createdBy;
-    }
 
     public Date getCreatedDate() {
         return createdDate;
@@ -69,13 +58,6 @@ public class PostDetails implements Serializable {
         this.createdDate = createdDate;
     }
 
-    public SimpleUserDetails getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public void setLastModifiedBy(SimpleUserDetails lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
 
     public Date getLastModifiedDate() {
         return lastModifiedDate;
@@ -87,7 +69,7 @@ public class PostDetails implements Serializable {
 
     @Override
     public String toString() {
-        return "PostDetails{" + "id=" + id + ", title=" + title + ", content=" + content + ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", lastModifiedBy=" + lastModifiedBy + ", lastModifiedDate=" + lastModifiedDate + '}';
+        return "PostDetails{" + "id=" + id + ", title=" + title + ", content=" + content + ", createdDate=" + createdDate + ", lastModifiedDate=" + lastModifiedDate + '}';
     }
 
 }

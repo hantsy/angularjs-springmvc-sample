@@ -3,7 +3,6 @@ package com.hantsylabs.restexample.springmvc.api;
 import com.hantsylabs.restexample.springmvc.ApiErrors;
 import com.hantsylabs.restexample.springmvc.exception.InvalidRequestException;
 import com.hantsylabs.restexample.springmvc.exception.ResourceNotFoundException;
-import com.hantsylabs.restexample.springmvc.exception.UsernameExistedException;
 import com.hantsylabs.restexample.springmvc.model.ResponseMessage;
 import java.util.List;
 import javax.inject.Inject;
@@ -50,16 +49,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(value = {UsernameExistedException.class})
-    @ResponseBody
-    public ResponseEntity<ResponseMessage> handleUsernameExistedException(UsernameExistedException ex, WebRequest request) {
-        if (log.isDebugEnabled()) {
-            log.debug("handling UsernameExistedException...");
-        }
-
-        ResponseMessage error = ResponseMessage.danger("username existed.");
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
-    }
 
     @ExceptionHandler(value = {InvalidRequestException.class})
     public ResponseEntity<ResponseMessage> handleInvalidRequestException(InvalidRequestException ex, WebRequest req) {

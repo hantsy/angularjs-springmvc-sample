@@ -62,9 +62,4 @@ public class JpaConfig {
         return new JpaTransactionManager(entityManagerFactory().getObject());
     }
 
-//    @Bean
-//    public AuditorAware<User> auditor() {
-//        return () -> SecurityUtil.currentUser();
-//    }
-
 }

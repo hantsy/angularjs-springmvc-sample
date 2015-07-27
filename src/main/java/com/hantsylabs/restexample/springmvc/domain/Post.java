@@ -8,13 +8,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
-import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 
 /**
@@ -53,23 +50,10 @@ public class Post implements Serializable {
     @Enumerated
     private Status status = Status.DRAFT;
 
-//    @OneToMany(mappedBy = "post", cascade = {CascadeType.ALL})
-//    private List<Comment> comments = new ArrayList<>();
-
-    @ManyToOne
-    @JoinColumn(name = "created_by")
-    @CreatedBy
-    private User createdBy;
-
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_date")
     @CreatedDate
     private Date createdDate;
-
-    @ManyToOne
-    @JoinColumn(name = "last_modified_by")
-    @CreatedBy
-    private User lastModifiedBy;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "last_modified_date")
@@ -108,36 +92,12 @@ public class Post implements Serializable {
         this.status = status;
     }
 
-//    public List<Comment> getComments() {
-//        return comments;
-//    }
-//
-//    public void setComments(List<Comment> comments) {
-//        this.comments = comments;
-//    }
-
-    public User getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(User createdBy) {
-        this.createdBy = createdBy;
-    }
-
     public Date getCreatedDate() {
         return createdDate;
     }
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public User getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public void setLastModifiedBy(User lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
     }
 
     public Date getLastModifiedDate() {
@@ -150,7 +110,7 @@ public class Post implements Serializable {
 
     @Override
     public String toString() {
-        return "Post{" + "title=" + title + ", content=" + content + ", status=" + status + ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", lastModifiedBy=" + lastModifiedBy + ", lastModifiedDate=" + lastModifiedDate + '}';
+        return "Post{" + "id=" + id + ", title=" + title + ", content=" + content + ", status=" + status + ", createdDate=" + createdDate + ", lastModifiedDate=" + lastModifiedDate + '}';
     }
 
 }

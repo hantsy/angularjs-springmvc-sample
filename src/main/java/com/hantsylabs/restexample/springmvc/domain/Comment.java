@@ -13,7 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 
 /**
@@ -42,11 +41,6 @@ public class Comment implements Serializable {
     @JoinColumn(name = "post_id")
     @ManyToOne()
     private Post post;
-
-    @ManyToOne
-    @JoinColumn(name = "created_by")
-    @CreatedBy
-    private User createdBy;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_on")
@@ -77,14 +71,6 @@ public class Comment implements Serializable {
         this.post = post;
     }
 
-    public User getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(User createdBy) {
-        this.createdBy = createdBy;
-    }
-
     public Date getCreatedDate() {
         return createdDate;
     }
@@ -95,7 +81,8 @@ public class Comment implements Serializable {
 
     @Override
     public String toString() {
-        return "Comment{" + "id=" + id + ", content=" + content + ", post=" + post + ", createdBy=" + createdBy + ", createdDate=" + createdDate + '}';
+        return "Comment{" + "id=" + id + ", content=" + content + ", post=" + post + ", createdDate=" + createdDate + '}';
     }
+
 
 }

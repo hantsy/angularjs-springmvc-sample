@@ -1,9 +1,7 @@
 package com.hantsylabs.restexample.springmvc.model;
 
-
 import java.io.Serializable;
 import java.util.Date;
-
 
 /**
  *
@@ -20,8 +18,6 @@ public class CommentDetails implements Serializable {
     private Long id;
 
     private String content;
-
-    private SimpleUserDetails createdBy;
 
     private Date createdDate;
 
@@ -49,16 +45,9 @@ public class CommentDetails implements Serializable {
         this.createdDate = createdDate;
     }
 
-    public SimpleUserDetails getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(SimpleUserDetails createdBy) {
-        this.createdBy = createdBy;
-    }
-
     @Override
     public String toString() {
-        return "CommentDetails{" + "id=" + id + ", content=" + content + ", createdBy=" + createdBy + ", createdOn=" + createdDate + '}';
+        return "CommentDetails{" + "id=" + id + ", content=" + content + ", createdDate=" + createdDate + '}';
     }
+
 }
