@@ -2,9 +2,6 @@
     <h1>{{post.title}}</h1>
 </div>
 
-<p>by {{post.createdBy.displayName}}, at
-    {{post.createdDate|date:'short'}}</p>
-
 <p>{{post.content}}</p>
 
 <h3>Comments({{comments.length||'0'}})</h3>
@@ -16,13 +13,7 @@
 </div>
 <ul class="list-unstyled">
     <li ng-repeat="comment in comments" style="border-bottom: #ccc dotted thin !important;">
-        <p><small>By {{comment.createdBy.name}} at
-            {{comment.createdDate|date:'short'}}</small></p>
         <p>{{comment.content}}</p>
-        <p ng-show="user.id == post.createdBy.id">
-            <a class="btn btn-sm btn-default btn-danger"
-               ng-click="delComment($index)"><span class="glyphicon glyphicon-remove-sign"></span> <msg key="delete"></msg></a>
-        </p>
     </li>
 </ul>
 

@@ -25,8 +25,10 @@ public class PostSpecifications {
             List<Predicate> predicates = new ArrayList<>();
             if (StringUtils.hasText(keyword)) {
                 predicates.add(
-                        cb.or(cb.like(root.get(Post_.title), "%" + keyword + "%"),
-                                cb.like(root.get(Post_.content), "%" + keyword + "%"))
+                        cb.or(
+                                cb.like(root.get(Post_.title), "%" + keyword + "%"),
+                                cb.like(root.get(Post_.content), "%" + keyword + "%")
+                        )
                 );
             }
 

@@ -30,15 +30,8 @@
                             templateUrl: 'partials/posts/new.html'})
                 .when('/posts/:id',
                         {controller: 'DetailsController',
-                            templateUrl: 'partials/posts/details.html'})
-                .when('/admin/users',
-                        {templateUrl: 'partials/admin/users.html'})
-                .when('/user/home',
-                        {templateUrl: 'partials/user/home.html'})
-                .when('/user/password',
-                        {templateUrl: 'partials/user/password.html'})
-                .when('/user/profile',
-                        {templateUrl: 'partials/user/profile.html'});
+                            templateUrl: 'partials/posts/details.html'});
+
 
         //configure $http to catch message responses and show them
         $httpProvider.interceptors.push(function ($q) {
@@ -52,20 +45,6 @@
                     };
                 }
             };
-//            return function(promise) {
-//                return promise.then(
-//                        //this is called after each successful server request
-//                                function(response) {
-//                                    setMessage(response);
-//                                    return response;
-//                                },
-//                                //this is called after each unsuccessful server request
-//                                        function(response) {
-//                                            setMessage(response);
-//                                            return $q.reject(response);
-//                                        }
-//                                );
-//                            };
 
             return {
                 //this is called after each successful server request
@@ -83,32 +62,6 @@
 
             };
         });
-
-        //configure $http to show a login dialog whenever a 401 unauthorized response arrives
-//        $httpProvider.responseInterceptors.push(function ($rootScope, $q) {
-//            return function (promise) {
-//                return promise.then(
-//                    //success -> don't intercept
-//                    function (response) {
-//                        return response;
-//                    },
-//                    //error -> if 401 save the request and broadcast an event
-//                    function (response) {
-//                        if (response.status === 401) {
-//                            var deferred = $q.defer(),
-//                                req = {
-//                                    config: response.config,
-//                                    deferred: deferred
-//                                };
-//                            $rootScope.requests401.push(req);
-//                            $rootScope.$broadcast('event:loginRequired');
-//                            return deferred.promise;
-//                        }
-//                        return $q.reject(response);
-//                    }
-//                );
-//            };
-//        });
 
         $httpProvider.interceptors.push(function ($rootScope, $q) {
 
@@ -181,10 +134,8 @@
             for (i = 0; i < requests.length; i += 1) {
                 retry(requests[i]);
             }
+
             $rootScope.requests401 = [];
-
-
-
             $location.path('/posts');
         });
 
@@ -194,13 +145,13 @@
         $rootScope.$on('event:loginRequest', function (event, username, password) {
             httpHeaders.common['Authorization'] = 'Basic ' + base64.encode(username + ':' + password);
             console.log('httpHeaders.common[\'Authorization\']@' + httpHeaders.common['Authorization'] + ':::' + username + ':' + password);
-            $http.get('api/self')
+            $http.get('api/ping')
                     .success(function (data) {
-                        $rootScope.user = data;
+                        $rootScope.authenticated = true;
                         $rootScope.$broadcast('event:loginConfirmed');
                     })
                     .error(function (data) {
-                        console.log('login failed...');
+                        console.log('login failed...@' + data);
                     });
         });
 
@@ -208,6 +159,7 @@
          * On 'logoutRequest' invoke logout on the server and broadcast 'event:loginRequired'.
          */
         $rootScope.$on('event:logoutRequest', function () {
+            $rootScope.authenticated = false;
             httpHeaders.common['Authorization'] = null;
         });
 
@@ -220,14 +172,14 @@
         $rootScope.$on('$routeChangeStart', function (event, nextLoc, currentLoc) {
             //console.log('fire event@$routeChangeStart');
             var closedToPublic = (-1 === routesOpenToPublic.indexOf($location.path()));
-            if (closedToPublic && !$rootScope.user) {
+            if (closedToPublic && !$rootScope.authenticated) {
                 //console.log('login required...');             
                 $rootScope.$broadcast('event:loginRequired');
-            } else if (!!$rootScope.user) {
+            } else if (!!$rootScope.authenticated) {
                 //console.log('already logged in...'); 
                 if (!!nextLoc && nextLoc.templateUrl == 'partials/login.html') {
                     console.log('in login.html, go to /user/home...');
-                    $location.path('/user/home');
+                    $location.path('/posts');
                 } else {
                     //do nothing...
                 }

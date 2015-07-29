@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="form-group  pull-right">
-                <button class="btn btn-success btn-block" ng-click="add()" style="min-width: 120px"><i class="fa fa-plus-circle"></i><msg key="add"></msg></button>
+                <button class="btn btn-success btn-block" ng-click="add()" style="min-width: 120px"><i class="fa fa-plus-circle"></i><msg key="newPost"></msg></button>
             </div>
         </form>
     </div>
@@ -38,23 +38,15 @@
             <table class="table table-striped table-hover">
                 <tr>
                     <th>
-                <msg key="title"></msg>
-                </th>
-                <th>
-                <msg key="status"></msg>
-                </th>
-                <th>
-                <msg key="createdOn"></msg>
-                </th>
-                <th>
-                <msg key="createdBy"></msg>
-                </th>
+                        <msg key="title"></msg>
+                    </th>
+                    <th>
+                        <msg key="status"></msg>
+                    </th>
                 </tr>
-                <tr ng-repeat="post in posts|orderBy:-createdOn">
+                <tr ng-repeat="post in posts|orderBy:title">
                     <td><a ng-href="#/posts/{{post.id}}">{{post.title}}</a></td>
                     <td>{{post.status}}</td>
-                    <td>{{post.createdDate|date:'short'}}</td>
-                    <td>{{post.createdBy.name}}</td>
                 </tr>
             </table>
         </div>

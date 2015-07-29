@@ -21,11 +21,6 @@
             return $location.url();
         };
 
-// $scope.login = function() {
-// console.log('username:password @' + $scope.username + ',' + $scope.password);
-// $scope.$emit('event:loginRequest', $scope.username, $scope.password);
-// //$('#login').modal('hide');
-// };
         $scope.logout = function () {
             $rootScope.user = null;
             $scope.username = $scope.password = null;
@@ -41,117 +36,6 @@
             console.log('username:password @' + $scope.username + ',' + $scope.password);
             $scope.$emit('event:loginRequest', $scope.username, $scope.password);
             // $('#login').modal('hide');
-        };
-    });
-
-    as.controller('PasswordController', function ($scope, $rootScope, $http, base64, $location) {
-        var actionUrl = 'api/self?action=CHANGE_PWD';
-        $scope.data = {};
-
-        $scope.changePwd = function () {
-            var username = $rootScope.user.username;
-            var newpwd = $scope.data.newPassword;
-            console.log('username@' + username);
-            console.log('password new @' + newpwd);
-            $http.put(actionUrl, $scope.data)
-                    .success(function (data) {
-                        console.log(data);
-                        $rootScope.user.password = newpwd;
-                        $http.default.headers.common['Authorization'] = 'Basic ' + base64.encode(username + ':' + newpwd);
-                        $location.url('/user/home');
-                    })
-                    .error(function (data) {
-                        console.log(data);
-                    });
-
-        }
-
-        $scope.cancel = function () {
-            $location.url('/user/home');
-        }
-
-    });
-
-    as.controller('ProfileController', function ($scope, $rootScope, $http, base64, $location) {
-        var actionUrl = 'api/self?action=UPDATE_PROFILE',
-                load = function () {
-                    $scope.data = {};
-                    $scope.data.displayName = $rootScope.user.displayName;
-                };
-
-        load();
-
-        $scope.updateProfile = function () {
-            var displayName = $scope.data.displayName;
-            console.log("displaye Name is @" + displayName);
-            $http.put(actionUrl, $scope.data)
-                    .success(function (data) {
-                        console.log(data);
-                        $rootScope.user.displayName = displayName;
-                        $location.url('/user/home');
-                    })
-                    .error(function (data) {
-                        console.log(data);
-                    });
-
-        };
-
-        $scope.cancel = function () {
-            $location.url('/user/home');
-        };
-
-    });
-
-
-    as.controller('UserAdminController', function ($scope, $http, i18n) {
-        $scope.p = 1;
-        var actionUrl = 'api/mgt/users/',
-                load = function () {
-                    $http.get(actionUrl + '?page=' + ($scope.p - 1)).success(function (data) {
-                        $scope.users = data.content;
-                        $scope.totalItems=data.totalElements;
-                    });
-                };
-
-        load();
-
-        $scope.roleOpts = ['USER', 'ADMIN'];
-        $scope.user = {};
-        
-        $scope.search=function(){
-            load();
-        };
-
-        $scope.delete = function (idx) {
-            console.log('delete index @' + idx + ', id is@' + $scope.users[idx].id);
-            if (confirm($.i18n.prop('confirm.delete'))) {
-                $http.delete(actionUrl + $scope.users[idx].id).success(function () {
-                    load();
-                });
-            }
-
-        };
-
-        $scope.initAdd = function () {
-            $scope.user = {};
-            $('#userDialog').modal('show');
-        };
-
-        $scope.save = function () {
-            $http.post(actionUrl, $scope.user).success(function () {
-                $('#userDialog').modal('hide');
-                load();
-            });
-        };
-
-        $scope.order = '+username';
-
-        $scope.orderBy = function (property) {
-            $scope.order = ($scope.order[0] === '+' ? '-' : '+') + property;
-        };
-
-        $scope.orderIcon = function (property) {
-            return property === $scope.order.substring(1) ? $scope.order[0] === '+' ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down' : '';
         };
     });
 
@@ -221,15 +105,17 @@
 
     });
 
-    as.controller('PostsController', function ($scope, $http, i18n) {
+    as.controller('PostsController', function ($scope, $http, $location, i18n) {
         $scope.p = 1;
         $scope.q = '';
         $scope.statusOpt = {'label': $.i18n.prop('ALL'), 'value': 'ALL'};
         $scope.statusOpts = [
-            {'label': 'ALL', 'value': 'ALL'},
-            {'label': 'DRAFT', 'value': 'DRAFT'},
-            {'label': 'PUBLISHED', 'value': 'PUBLISHED'}
+            {'label': $.i18n.prop('ALL'), 'value': 'ALL'},
+            {'label': $.i18n.prop('DRAFT'), 'value': 'DRAFT'},
+            {'label': $.i18n.prop('PUBLISHED'), 'value': 'PUBLISHED'}
         ];
+        
+        
 
         var actionUrl = 'api/posts/',
                 load = function () {
@@ -250,6 +136,10 @@
 
         $scope.toggleStatus = function (r) {
             $scope.statusOpt = r;
+        };
+        
+        $scope.add = function () {
+            $location.path('/posts/new');
         };
 
         $scope.delPost = function (idx) {

@@ -42,11 +42,6 @@ public class Comment implements Serializable {
     @ManyToOne()
     private Post post;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_on")
-    @CreatedDate
-    private Date createdDate;
-
     public Long getId() {
         return id;
     }
@@ -71,17 +66,9 @@ public class Comment implements Serializable {
         this.post = post;
     }
 
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
     @Override
     public String toString() {
-        return "Comment{" + "id=" + id + ", content=" + content + ", post=" + post + ", createdDate=" + createdDate + '}';
+        return "Comment{" + "id=" + id + ", content=" + content + ", post=" + post + '}';
     }
 
 

@@ -1,4 +1,3 @@
-
 package com.hantsylabs.restexample.springmvc.service;
 
 import com.hantsylabs.restexample.springmvc.DTOUtils;
@@ -38,32 +37,26 @@ public class BlogService {
     private CommentRepository commentRepository;
 
     public Page<PostDetails> searchPostsByCriteria(String q, Post.Status status, Pageable page) {
-        if (log.isDebugEnabled()) {
-            log.debug("search posts by keyword@" + q + ", page @" + page);
-        }
+
+        log.debug("search posts by keyword@" + q + ", page @" + page);
 
         Page<Post> posts = postRepository.findAll(PostSpecifications.filterByKeywordAndStatus(q, status),
                 page);
 
-        if (log.isDebugEnabled()) {
-            log.debug("get posts size @" + posts.getTotalElements());
-        }
+        log.debug("get posts size @" + posts.getTotalElements());
 
         return DTOUtils.mapPage(posts, PostDetails.class);
     }
 
     public PostDetails savePost(PostForm form) {
-        if (log.isDebugEnabled()) {
-            log.debug("save post @" + form);
-        }
+
+        log.debug("save post @" + form);
 
         Post post = DTOUtils.map(form, Post.class);
 
         Post saved = postRepository.save(post);
 
-        if (log.isDebugEnabled()) {
-            log.debug("saved post id is @" + saved);
-        }
+        log.debug("saved post id is @" + saved);
 
         return DTOUtils.map(post, PostDetails.class);
 
@@ -72,26 +65,22 @@ public class BlogService {
     public void updatePost(Long id, PostForm form) {
         Assert.notNull(id, "post id can not be null");
 
-        if (log.isDebugEnabled()) {
-            log.debug("update post @" + form);
-        }
+        log.debug("update post @" + form);
 
         Post post = postRepository.findOne(id);
         DTOUtils.mapTo(form, post);
 
         Post saved = postRepository.save(post);
 
-        if (log.isDebugEnabled()) {
-            log.debug("updated post@" + saved);
-        }
+        log.debug("updated post@" + saved);
+
     }
 
     public PostDetails findPostById(Long id) {
+
         Assert.notNull(id, "post id can not be null");
 
-        if (log.isDebugEnabled()) {
-            log.debug("find post by id@" + id);
-        }
+        log.debug("find post by id@" + id);
 
         Post post = postRepository.findOne(id);
 
@@ -103,15 +92,12 @@ public class BlogService {
     }
 
     public Page<CommentDetails> findCommentsByPostId(Long id, Pageable page) {
-        if (log.isDebugEnabled()) {
-            log.debug("find comments by post id@" + id);
-        }
+
+        log.debug("find comments by post id@" + id);
 
         Page<Comment> comments = commentRepository.findByPostId(id, page);
 
-        if (log.isDebugEnabled()) {
-            log.debug("found results@" + comments.getTotalElements());
-        }
+        log.debug("found results@" + comments.getTotalElements());
 
         return DTOUtils.mapPage(comments, CommentDetails.class);
     }
@@ -119,9 +105,7 @@ public class BlogService {
     public CommentDetails saveCommentOfPost(Long id, CommentForm fm) {
         Assert.notNull(id, "post id can not be null");
 
-        if (log.isDebugEnabled()) {
-            log.debug("find post by id@" + id);
-        }
+        log.debug("find post by id@" + id);
 
         Post post = postRepository.findOne(id);
 
@@ -135,9 +119,7 @@ public class BlogService {
 
         comment = commentRepository.save(comment);
 
-        if (log.isDebugEnabled()) {
-            log.debug("comment saved@" + comment);
-        }
+        log.debug("comment saved@" + comment);
 
         return DTOUtils.map(comment, CommentDetails.class);
     }
@@ -145,9 +127,7 @@ public class BlogService {
     public void deletePostById(Long id) {
         Assert.notNull(id, "post id can not be null");
 
-        if (log.isDebugEnabled()) {
-            log.debug("find post by id@" + id);
-        }
+        log.debug("find post by id@" + id);
 
         Post post = postRepository.findOne(id);
 
@@ -161,9 +141,7 @@ public class BlogService {
     public void deleteCommentById(Long id) {
         Assert.notNull(id, "comment id can not be null");
 
-        if (log.isDebugEnabled()) {
-            log.debug("delete comment by id@" + id);
-        }
+        log.debug("delete comment by id@" + id);
 
         Comment comment = commentRepository.findOne(id);
 

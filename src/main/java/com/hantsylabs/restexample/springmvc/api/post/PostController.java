@@ -38,18 +38,15 @@ public class PostController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<Page<PostDetails>> getAllPosts(
-            @RequestParam(value="q", required = false) String keyword, //
-            @RequestParam(value="status", required = false) Post.Status status, //
+            @RequestParam(value = "q", required = false) String keyword, //
+            @RequestParam(value = "status", required = false) Post.Status status, //
             @PageableDefault(page = 0, size = 10, sort = "createdDate", direction = Direction.DESC) Pageable page) {
-        if (log.isDebugEnabled()) {
-            log.debug("get all posts of q@" + keyword + ", status @" + status + ", page@" + page);
-        }
+
+        log.debug("get all posts of q@" + keyword + ", status @" + status + ", page@" + page);
 
         Page<PostDetails> posts = blogService.searchPostsByCriteria(keyword, status, page);
 
-        if (log.isDebugEnabled()) {
-            log.debug("get posts size @" + posts.getTotalElements());
-        }
+        log.debug("get posts size @" + posts.getTotalElements());
 
         return new ResponseEntity<>(posts, HttpStatus.OK);
     }
@@ -57,15 +54,12 @@ public class PostController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<PostDetails> getPost(@PathVariable("id") Long id) {
-        if (log.isDebugEnabled()) {
-            log.debug("get postsinfo by id @" + id);
-        }
+
+        log.debug("get postsinfo by id @" + id);
 
         PostDetails post = blogService.findPostById(id);
 
-        if (log.isDebugEnabled()) {
-            log.debug("get post @" + post);
-        }
+        log.debug("get post @" + post);
 
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
@@ -75,15 +69,12 @@ public class PostController {
     public ResponseEntity<Page<CommentDetails>> getCommentsOfPost(
             @PathVariable("id") Long id,
             @PageableDefault(page = 0, size = 10, sort = "createdDate", direction = Direction.DESC) Pageable page) {
-        if (log.isDebugEnabled()) {
-            log.debug("get comments of post@" + id + ", page@" + page);
-        }
+
+        log.debug("get comments of post@" + id + ", page@" + page);
 
         Page<CommentDetails> commentsOfPost = blogService.findCommentsByPostId(id, page);
 
-        if (log.isDebugEnabled()) {
-            log.debug("get post comment size @" + commentsOfPost.getTotalElements());
-        }
+        log.debug("get post comment size @" + commentsOfPost.getTotalElements());
 
         return new ResponseEntity<>(commentsOfPost, HttpStatus.OK);
     }
@@ -91,15 +82,12 @@ public class PostController {
     @RequestMapping(value = "", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<Void> createPost(@RequestBody PostForm post) {
-        if (log.isDebugEnabled()) {
-            log.debug("create a new post");
-        }
+
+        log.debug("create a new post");
 
         PostDetails saved = blogService.savePost(post);
 
-        if (log.isDebugEnabled()) {
-            log.debug("saved post id is @" + saved.getId());
-        }
+        log.debug("saved post id is @" + saved.getId());
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
@@ -107,9 +95,8 @@ public class PostController {
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ResponseBody
     public ResponseEntity<ResponseMessage> deletePostById(@PathVariable("id") Long id) {
-        if (log.isDebugEnabled()) {
-            log.debug("delete post by id @" + id);
-        }
+
+        log.debug("delete post by id @" + id);
 
         blogService.deletePostById(id);
 
@@ -120,15 +107,12 @@ public class PostController {
     @ResponseBody
     public ResponseEntity<Void> createCommentOfPost(
             @PathVariable("id") Long id, @RequestBody CommentForm comment) {
-        if (log.isDebugEnabled()) {
-            log.debug("new comment of post@" + id +", comment"+ comment);
-        }
+
+        log.debug("new comment of post@" + id + ", comment" + comment);
 
         CommentDetails saved = blogService.saveCommentOfPost(id, comment);
 
-        if (log.isDebugEnabled()) {
-            log.debug("saved comment @" + saved.getId());
-        }
+        log.debug("saved comment @" + saved.getId());
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }

@@ -50,16 +50,6 @@ public class Post implements Serializable {
     @Enumerated
     private Status status = Status.DRAFT;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_date")
-    @CreatedDate
-    private Date createdDate;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "last_modified_date")
-    @CreatedDate
-    private Date lastModifiedDate;
-
     public Long getId() {
         return id;
     }
@@ -92,25 +82,9 @@ public class Post implements Serializable {
         this.status = status;
     }
 
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public Date getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public void setLastModifiedDate(Date lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-    }
-
     @Override
     public String toString() {
-        return "Post{" + "id=" + id + ", title=" + title + ", content=" + content + ", status=" + status + ", createdDate=" + createdDate + ", lastModifiedDate=" + lastModifiedDate + '}';
+        return "Post{" + "id=" + id + ", title=" + title + ", content=" + content + ", status=" + status + '}';
     }
 
 }

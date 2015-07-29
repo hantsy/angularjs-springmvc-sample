@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http   
+            http   
                 .authorizeRequests()   
     			.antMatchers("/api/**")
     			.authenticated()
@@ -40,24 +40,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     			.authorizeRequests()   
     			.anyRequest()
     			.permitAll()
-            .and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            .and()
-                .httpBasic()
-            .and()
-                .csrf()
-                .disable();
+                .and()
+                    .sessionManagement()
+                    .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                    .httpBasic()
+                .and()
+                    .csrf()
+                    .disable();
 	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth)
 			throws Exception {
 		auth.inMemoryAuthentication()
-            .passwordEncoder(passwordEncoder())
-            .withUser("admin").password("test123").authorities("ROLE_ADMIN")
-            .and()
-                .withUser("test").password("test123").authorities("ROLE_USER");
+                    .passwordEncoder(passwordEncoder())
+                    .withUser("admin").password("test123").authorities("ROLE_ADMIN")
+                    .and()
+                        .withUser("test").password("test123").authorities("ROLE_USER");
 	}
 
 
