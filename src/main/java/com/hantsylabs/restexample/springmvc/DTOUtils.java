@@ -14,8 +14,6 @@ import org.springframework.data.domain.PageRequest;
  */
 public class DTOUtils {
 
-    //private static final Logger log = LoggerFactory.getLogger(DTOUtils.class);
-
     private static final ModelMapper INSTANCE = new ModelMapper();
 
     public static <S, T> T map(S source, Class<T> targetClass) {

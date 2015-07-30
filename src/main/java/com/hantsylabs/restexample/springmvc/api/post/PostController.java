@@ -40,7 +40,7 @@ public class PostController {
     public ResponseEntity<Page<PostDetails>> getAllPosts(
             @RequestParam(value = "q", required = false) String keyword, //
             @RequestParam(value = "status", required = false) Post.Status status, //
-            @PageableDefault(page = 0, size = 10, sort = "createdDate", direction = Direction.DESC) Pageable page) {
+            @PageableDefault(page = 0, size = 10, sort = "title", direction = Direction.DESC) Pageable page) {
 
         log.debug("get all posts of q@" + keyword + ", status @" + status + ", page@" + page);
 

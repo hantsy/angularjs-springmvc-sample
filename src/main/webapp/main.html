@@ -46,12 +46,15 @@
                         <li ng-class="activeWhen(path() == '/posts/new')"><a
                                 href="#/posts/new"><msg key="newPost"></msg></a></li>
                     </ul>
-                    <form class="navbar-form navbar-right">
-                        <a ng-if="!authenticated" class="btn btn-success" href="#/login"><msg key="login"></msg></a>
-                        <button ng-if="!!authenticated" class="btn btn-default" ng-click="logout()"><msg key="logout"></msg></button>
-                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li  ng-if="!authenticated">
+                            <a href="#/login"><msg key="login"></msg></a>
+                        </li>
+                        <li ng-if="!!authenticated">
+                            <a href='javascript:void(0);' ng-click="logout()">{{name}}, <msg key="logout"></msg></a>
+                        </li>
+                    </ul>
                 </div>
-
 
                 <!--/.nav-collapse -->
 

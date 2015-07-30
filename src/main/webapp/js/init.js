@@ -148,6 +148,7 @@
             $http.get('api/ping')
                     .success(function (data) {
                         $rootScope.authenticated = true;
+                        $rootScope.name=data.username;
                         $rootScope.$broadcast('event:loginConfirmed');
                     })
                     .error(function (data) {
@@ -160,7 +161,8 @@
          */
         $rootScope.$on('event:logoutRequest', function () {
             $rootScope.authenticated = false;
-            httpHeaders.common['Authorization'] = null;
+            delete $rootScope.name;
+            delete httpHeaders.common['Authorization'];
         });
 
         var routesOpenToPublic = [];
