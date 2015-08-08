@@ -34,6 +34,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
             http   
                 .authorizeRequests()   
+    			.antMatchers("/api/ping")
+    			.permitAll()
+    		.and()
+                .authorizeRequests()   
     			.antMatchers("/api/**")
     			.authenticated()
     		.and()

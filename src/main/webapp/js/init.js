@@ -145,10 +145,10 @@
         $rootScope.$on('event:loginRequest', function (event, username, password) {
             httpHeaders.common['Authorization'] = 'Basic ' + base64.encode(username + ':' + password);
             console.log('httpHeaders.common[\'Authorization\']@' + httpHeaders.common['Authorization'] + ':::' + username + ':' + password);
-            $http.get('api/ping')
+            $http.get('api/me')
                     .success(function (data) {
                         $rootScope.authenticated = true;
-                        $rootScope.name=data.username;
+                        $rootScope.name = data.username;
                         $rootScope.$broadcast('event:loginConfirmed');
                     })
                     .error(function (data) {
@@ -180,7 +180,6 @@
             } else if (!!$rootScope.authenticated) {
                 //console.log('already logged in...'); 
                 if (!!nextLoc && nextLoc.templateUrl == 'partials/login.html') {
-                    console.log('in login.html, go to /user/home...');
                     $location.path('/posts');
                 } else {
                     //do nothing...
@@ -189,5 +188,14 @@
         });
 
         //$rootScope.$on('$viewContentChange', funtion());
+        //check the networking connection.
+
+        $http.get('api/ping')
+                .success(function (data) {
+                    console.log("ping result@"+data);
+                })
+                .error(function (data) {
+                     $rootScope.message={text:'Network connection eror!', type:'danger', show:true};
+                });
     });
 }());
