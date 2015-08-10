@@ -19,6 +19,8 @@ public class CommentDetails implements Serializable {
 
     private String content;
 
+    private Date createdDate;
+
     public Long getId() {
         return id;
     }
@@ -35,9 +37,17 @@ public class CommentDetails implements Serializable {
         this.content = content;
     }
 
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
     @Override
     public String toString() {
-        return "CommentDetails{" + "id=" + id + ", content=" + content + '}';
+        return "CommentDetails{" + "id=" + id + ", content=" + content + ", createdDate=" + createdDate + '}';
     }
 
 }

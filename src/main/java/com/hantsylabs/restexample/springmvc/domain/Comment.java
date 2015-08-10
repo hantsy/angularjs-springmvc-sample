@@ -10,10 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import org.springframework.data.annotation.CreatedDate;
 
 /**
  *
@@ -39,8 +39,12 @@ public class Comment implements Serializable {
     private String content;
 
     @JoinColumn(name = "post_id")
-    @ManyToOne()
+    @ManyToOne(optional = false)
     private Post post;
+
+    @Column(name = "created_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate;
 
     public Long getId() {
         return id;
@@ -66,10 +70,22 @@ public class Comment implements Serializable {
         this.post = post;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" + "id=" + id + ", content=" + content + ", post=" + post + '}';
+    public Date getCreatedDate() {
+        return createdDate;
     }
 
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    @PrePersist
+    public void prePersist() {
+        this.createdDate = new Date();
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" + "id=" + id + ", content=" + content + ", post=" + post.getId() + ", createdDate=" + createdDate + '}';
+    }
 
 }

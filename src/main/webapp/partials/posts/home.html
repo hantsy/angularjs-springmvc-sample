@@ -43,10 +43,14 @@
                     <th>
                         <msg key="status"></msg>
                     </th>
+                    <th>
+                        <msg key="createdOn"></msg>
+                    </th>
                 </tr>
-                <tr ng-repeat="post in posts|orderBy:title">
+                <tr ng-repeat="post in posts|orderBy:createdDate">
                     <td><a ng-href="#/posts/{{post.id}}">{{post.title}}</a></td>
                     <td>{{post.status}}</td>
+                    <td>{{post.createdDate|date:'short'}}</td>
                 </tr>
             </table>
         </div>

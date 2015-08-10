@@ -81,7 +81,7 @@ public class PostController {
 
     @RequestMapping(value = "", method = RequestMethod.POST)
     @ResponseBody
-    public ResponseEntity<Void> createPost(@RequestBody PostForm post) {
+    public ResponseEntity<ResponseMessage> createPost(@RequestBody PostForm post) {
 
         log.debug("create a new post");
 
@@ -89,7 +89,7 @@ public class PostController {
 
         log.debug("saved post id is @" + saved.getId());
 
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(ResponseMessage.success("post.created"), HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
@@ -100,12 +100,12 @@ public class PostController {
 
         blogService.deletePostById(id);
 
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(ResponseMessage.success("post.updated"), HttpStatus.NO_CONTENT);
     }
 
     @RequestMapping(value = "/{id}/comments", method = RequestMethod.POST)
     @ResponseBody
-    public ResponseEntity<Void> createCommentOfPost(
+    public ResponseEntity<ResponseMessage> createCommentOfPost(
             @PathVariable("id") Long id, @RequestBody CommentForm comment) {
 
         log.debug("new comment of post@" + id + ", comment" + comment);
@@ -114,7 +114,7 @@ public class PostController {
 
         log.debug("saved comment @" + saved.getId());
 
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(ResponseMessage.success("comment.created"), HttpStatus.CREATED);
     }
 
 }
