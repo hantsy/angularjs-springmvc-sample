@@ -36,4 +36,4 @@ An example application using AnguarJS/Bootstrap as frontend and Spring MVC as RE
 
 ## Spring Boot
 
-If you are interested in Spring Boot, I have move the `boot` branch into a new project [angularjs-springmvc-sample-boot](https://github.com/hantsy/angularjs-springmvc-sample-boot).
+If you are interested in Spring Boot, I have moved the `boot` branch into a new project [angularjs-springmvc-sample-boot](https://github.com/hantsy/angularjs-springmvc-sample-boot).
