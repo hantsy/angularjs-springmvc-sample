@@ -31,9 +31,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @Inject
     private MessageSource messageSource;
 
-    @ExceptionHandler(value = {Exception.class})
+    @ExceptionHandler(value = {Exception.class, RuntimeException.class})
     @ResponseBody
-    public ResponseEntity<ResponseMessage> handleAuthenticationException(Exception ex, WebRequest request) {
+    public ResponseEntity<ResponseMessage> handleGenericException(Exception ex, WebRequest request) {
         if (log.isDebugEnabled()) {
             log.debug("handling exception...");
         }
