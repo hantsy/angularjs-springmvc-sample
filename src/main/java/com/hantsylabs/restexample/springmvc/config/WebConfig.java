@@ -31,17 +31,17 @@ import org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExc
 @Configuration
 @EnableWebMvc
 @ComponentScan(
-    basePackageClasses = {Constants.class},
-    useDefaultFilters = false,
-    includeFilters = {
-        @Filter(
-            type = FilterType.ANNOTATION,
-            value = {
-                Controller.class,
-                RestController.class,
-                ControllerAdvice.class
-            })
-    }
+        basePackageClasses = {Constants.class},
+        useDefaultFilters = false,
+        includeFilters = {
+            @Filter(
+                    type = FilterType.ANNOTATION,
+                    value = {
+                        Controller.class,
+                        RestController.class,
+                        ControllerAdvice.class
+                    })
+        }
 )
 public class WebConfig extends SpringDataWebConfiguration {
 
@@ -52,15 +52,15 @@ public class WebConfig extends SpringDataWebConfiguration {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        
+
         registry.addResourceHandler("/swagger-ui.html")
-            .addResourceLocations("classpath:META-INF/resources/");
+                .addResourceLocations("classpath:META-INF/resources/");
 
         registry.addResourceHandler("/webjars/**")
-            .addResourceLocations("classpath:META-INF/resources/webjars/");
+                .addResourceLocations("classpath:META-INF/resources/webjars/");
     }
 
-
+        
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 
