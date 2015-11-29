@@ -1,7 +1,6 @@
 package com.hantsylabs.restexample.springmvc.api;
 
 import com.hantsylabs.restexample.springmvc.Constants;
-import com.hantsylabs.restexample.springmvc.model.ResponseMessage;
 import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
