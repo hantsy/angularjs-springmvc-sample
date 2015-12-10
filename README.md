@@ -3,6 +3,10 @@ angularjs-springmvc-sample
 
 An example application using AnguarJS/Bootstrap as frontend and Spring MVC as REST API producer.
 
+I appricate any contribution for this project, docmentation, issues, suggestions, etc. But I found there are some unused issued added, before you file an issue, please <span style="font-size:50pt;font-color:red;">READ THE STEPS IN THIS README.md</span> carefully. 
+
+Thanks.
+
 
 ##Requirements
 
