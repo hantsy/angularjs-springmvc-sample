@@ -5,6 +5,8 @@ An example application using AnguarJS/Bootstrap as frontend and Spring MVC as RE
 
 _I appricate any contribution for this project, docmentation, issues, suggestions, etc. But I found there are some unused issued added, before you file an issue, please **READ THE STEPS IN THIS README.md**  carefully_.
 
+**在你提交 ISSUE 前，请务必确认已经执按本文中的步骤**。
+
 Thanks.
 
 
