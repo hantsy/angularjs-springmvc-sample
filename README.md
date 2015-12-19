@@ -3,6 +3,14 @@ angularjs-springmvc-sample
 
 An example application using AnguarJS/Bootstrap as frontend and Spring MVC as REST API producer.
 
+##Contribution
+
+_I appreciate any contribution for this project, including suggestions, documentation improvements, reporting issues, forks and bugfixs,  etc. I have found there are some unrelated issues added, before you file an issue, please **READ THE STEPS IN THIS README.md**  carefully_.
+
+**在你提交 ISSUE 前，请务必确认已经严格完成了本文中描述的操作步骤**。
+
+Thanks.
+
 
 ##Requirements
 
