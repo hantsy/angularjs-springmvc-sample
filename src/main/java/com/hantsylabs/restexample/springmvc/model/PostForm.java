@@ -1,5 +1,7 @@
 package com.hantsylabs.restexample.springmvc.model;
 
+import com.hantsylabs.restexample.springmvc.DTOUtils;
+import com.hantsylabs.restexample.springmvc.domain.Post;
 import java.io.Serializable;
 
 /**
@@ -37,6 +39,10 @@ public class PostForm implements Serializable {
     @Override
     public String toString() {
         return "PostForm{" + "title=" + title + ", content=" + content + '}';
+    }
+
+    public Post toEntity() {
+        return DTOUtils.map(this, Post.class);
     }
 
 }

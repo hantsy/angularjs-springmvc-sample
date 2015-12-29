@@ -30,11 +30,15 @@ public class BlogService {
 
     private static final Logger log = LoggerFactory.getLogger(BlogService.class);
 
-    @Inject
     private PostRepository postRepository;
 
-    @Inject
     private CommentRepository commentRepository;
+    
+    @Inject
+    public BlogService(PostRepository postRepository, CommentRepository commentRepository){
+        this.postRepository = postRepository;
+        this.commentRepository =  commentRepository;
+    }
 
     public Page<PostDetails> searchPostsByCriteria(String q, Post.Status status, Pageable page) {
 
@@ -56,13 +60,13 @@ public class BlogService {
 
         Post saved = postRepository.save(post);
 
-        log.debug("saved post id is @" + saved);
+        log.debug("saved post is @" + saved);
 
-        return DTOUtils.map(post, PostDetails.class);
+        return DTOUtils.map(saved, PostDetails.class);
 
     }
 
-    public void updatePost(Long id, PostForm form) {
+    public PostDetails updatePost(Long id, PostForm form) {
         Assert.notNull(id, "post id can not be null");
 
         log.debug("update post @" + form);
@@ -73,7 +77,8 @@ public class BlogService {
         Post saved = postRepository.save(post);
 
         log.debug("updated post@" + saved);
-
+        
+        return DTOUtils.map(saved, PostDetails.class);
     }
 
     public PostDetails findPostById(Long id) {

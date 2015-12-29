@@ -64,6 +64,7 @@ public class PostDetails implements Serializable {
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
+    
 
     @Override
     public String toString() {
