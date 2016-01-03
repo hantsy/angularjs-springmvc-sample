@@ -15,6 +15,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @RequestMapping(value = Constants.URI_API + Constants.URI_POSTS)
@@ -93,7 +95,13 @@ public class PostController {
 
         log.debug("saved post id is @" + saved.getId());
 
-        return new ResponseEntity<>(ResponseMessage.success("post.created"), HttpStatus.CREATED);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ServletUriComponentsBuilder.fromCurrentContextPath()
+                .path(Constants.URI_API + Constants.URI_POSTS + "/{id}")
+                .buildAndExpand(saved.getId())
+                .toUri()
+        );
+        return new ResponseEntity<>(ResponseMessage.success("post.created"), headers, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

@@ -170,6 +170,18 @@
             <artifactId>javax.transaction-api</artifactId>
             <version>1.2</version>
         </dependency>
+        <!-- javax.el -->
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>3.0.1-b04</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>3.0.1-b08</version>
+        </dependency>
+
 
         <!--java persistence API 2.1 -->
         <dependency>
@@ -230,8 +242,8 @@
         <!-- java mail -->
         <dependency>
             <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.4.1</version>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.5.4</version>
         </dependency>
         <dependency>
             <groupId>javax.activation</groupId>
@@ -333,6 +345,12 @@
                     <artifactId>xml-apis</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.1</version>
         </dependency>
         <!--AspectJ -->
         <dependency>
@@ -593,16 +611,67 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-
+         
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19</version>
                 <configuration>
-                    <detail>true</detail>
                     <printSummary>true</printSummary>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                    <excludes>
+                        <exclude>**/*IntegrationTest*</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.12.4</version>
+                <configuration>
+                    <includes>
+                        <include>**/*IntegrationTest*</include>
+                    </includes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <path>/angularjs-springmvc-sample</path>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>start-tomcat</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <fork>true</fork>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>stop-tomcat</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>shutdown</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -654,11 +723,6 @@
                     <downloadSources>true</downloadSources>
                     <dependenciesAsLibraries>true</dependenciesAsLibraries>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
             </plugin>
         </plugins>
     </build>

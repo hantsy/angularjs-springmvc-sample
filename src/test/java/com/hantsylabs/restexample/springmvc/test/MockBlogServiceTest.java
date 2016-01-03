@@ -1,16 +1,12 @@
 package com.hantsylabs.restexample.springmvc.test;
 
-import com.hantsylabs.restexample.springmvc.config.AppConfig;
-import com.hantsylabs.restexample.springmvc.config.DataJpaConfig;
-import com.hantsylabs.restexample.springmvc.config.DataSourceConfig;
-import com.hantsylabs.restexample.springmvc.config.JpaConfig;
 import com.hantsylabs.restexample.springmvc.domain.Post;
 import com.hantsylabs.restexample.springmvc.exception.ResourceNotFoundException;
 import com.hantsylabs.restexample.springmvc.model.PostDetails;
 import com.hantsylabs.restexample.springmvc.model.PostForm;
+import com.hantsylabs.restexample.springmvc.repository.CommentRepository;
 import com.hantsylabs.restexample.springmvc.repository.PostRepository;
 import com.hantsylabs.restexample.springmvc.service.BlogService;
-import java.util.Objects;
 import javax.inject.Inject;
 import org.junit.After;
 import org.junit.Before;
@@ -26,28 +22,25 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {AppConfig.class, DataSourceConfig.class, DataJpaConfig.class, JpaConfig.class})
-public class BlogServiceTest {
+@ContextConfiguration(classes = {MockDataConfig.class})
+public class MockBlogServiceTest {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BlogServiceTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(MockBlogServiceTest.class);
 
     @Inject
     private PostRepository postRepository;
 
     @Inject
+    private CommentRepository commentRepository;
+
     private BlogService blogService;
 
-    private Post post;
-
-    public BlogServiceTest() {
+    public MockBlogServiceTest() {
     }
 
     @Before
     public void setUp() {
-        postRepository.deleteAll();
-        post = postRepository.save(Fixtures.createPost("My first post", "content of my first post"));
-
-        assertNotNull(post.getId());
+        blogService = new BlogService(postRepository, commentRepository);
     }
 
     @After
@@ -64,21 +57,19 @@ public class BlogServiceTest {
 
         LOG.debug("post details @" + details);
         assertNotNull("saved post id should not be null@", details.getId());
-        assertNotNull(details.getId());
+        assertTrue(details.getId() == 1L);
 
-        Page<PostDetails> allPosts = blogService.searchPostsByCriteria("", null, new PageRequest(0, 10));
-        assertTrue(allPosts.getTotalElements() == 2);
+        Page<PostDetails> posts = blogService.searchPostsByCriteria("any keyword", Post.Status.DRAFT, new PageRequest(0, 10));
 
-        Page<PostDetails> posts = blogService.searchPostsByCriteria("first", Post.Status.DRAFT, new PageRequest(0, 10));
         assertTrue(posts.getTotalPages() == 1);
         assertTrue(!posts.getContent().isEmpty());
-        assertTrue(Objects.equals(posts.getContent().get(0).getId(), post.getId()));
-
+        assertTrue(posts.getContent().get(0).getId() == 1L);
+        
         PostForm updatingForm = new PostForm();
         updatingForm.setTitle("updating title");
         updatingForm.setContent("updating content");
-        PostDetails updatedDetails = blogService.updatePost(post.getId(), updatingForm);
-
+        PostDetails updatedDetails = blogService.updatePost(1L, updatingForm);
+        
         assertNotNull(updatedDetails.getId());
         assertTrue("updating title".equals(updatedDetails.getTitle()));
         assertTrue("updating content".equals(updatedDetails.getContent()));
