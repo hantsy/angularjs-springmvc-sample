@@ -32,8 +32,12 @@ public class PostController {
     private static final Logger log = LoggerFactory
             .getLogger(PostController.class);
 
-    @Inject
     private BlogService blogService;
+
+    @Inject
+    public PostController(BlogService blogService) {
+        this.blogService = blogService;
+    }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody

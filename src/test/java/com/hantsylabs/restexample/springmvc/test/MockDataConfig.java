@@ -8,12 +8,13 @@ import java.util.Arrays;
 import java.util.Date;
 
 import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.hantsylabs.restexample.springmvc.domain.Post;
 import com.hantsylabs.restexample.springmvc.exception.ResourceNotFoundException;
+import com.hantsylabs.restexample.springmvc.repository.CommentRepository;
 import com.hantsylabs.restexample.springmvc.repository.PostRepository;
+import com.hantsylabs.restexample.springmvc.service.BlogService;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,6 +42,17 @@ public class MockDataConfig {
         when(posts.findAll(any(Specification.class), any(Pageable.class))).thenReturn(new PageImpl(Arrays.asList(post), new PageRequest(0, 10), 1L));
         when(posts.findAll()).thenReturn(Arrays.asList(post));
         return posts;
+    }
+
+    @Bean
+    public CommentRepository commentRepository() {
+        CommentRepository commentRepository = mock(CommentRepository.class);
+        return commentRepository;
+    }
+    
+    @Bean
+    public BlogService blogService(PostRepository posts, CommentRepository comments){
+        return new BlogService(posts, comments);
     }
 
     @Bean

@@ -129,7 +129,7 @@ public class BlogService {
         return DTOUtils.map(comment, CommentDetails.class);
     }
 
-    public void deletePostById(Long id) {
+    public boolean deletePostById(Long id) {
         Assert.notNull(id, "post id can not be null");
 
         log.debug("find post by id@" + id);
@@ -141,6 +141,8 @@ public class BlogService {
         }
 
         postRepository.delete(post);
+        
+        return true;
     }
 
     public void deleteCommentById(Long id) {

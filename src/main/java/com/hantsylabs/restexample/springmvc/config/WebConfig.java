@@ -40,7 +40,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExc
                         Controller.class,
                         RestController.class,
                         ControllerAdvice.class
-                    })
+                    }
+            )
         }
 )
 public class WebConfig extends SpringDataWebConfiguration {
@@ -60,7 +61,6 @@ public class WebConfig extends SpringDataWebConfiguration {
                 .addResourceLocations("classpath:META-INF/resources/webjars/");
     }
 
-        
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 
