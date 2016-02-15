@@ -16,7 +16,11 @@ import org.springframework.util.StringUtils;
  * @author Hantsy Bai<hantsy@gmail.com>
  *
  */
-public class PostSpecifications {
+public final class PostSpecifications {
+	
+	private PostSpecifications() {
+	      throw new InstantiationError( "Must not instantiate this class" );
+	}
 
     public static Specification<Post> filterByKeywordAndStatus(
             final String keyword,//

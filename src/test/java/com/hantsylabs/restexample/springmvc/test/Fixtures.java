@@ -7,7 +7,11 @@ import com.hantsylabs.restexample.springmvc.model.PostForm;
  *
  * @author hantsy
  */
-public class Fixtures {
+public final class Fixtures {
+	
+	private Fixtures() {
+	      throw new InstantiationError( "Must not instantiate this class" );
+	}
 
     public static Post createPost(String title, String content) {
         Post post = new Post();

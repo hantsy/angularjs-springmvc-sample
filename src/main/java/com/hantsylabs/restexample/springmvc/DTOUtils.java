@@ -12,9 +12,13 @@ import org.springframework.data.domain.PageRequest;
  *
  * @author Hantsy Bai<hantsy@gmail.com>
  */
-public class DTOUtils {
+public final class DTOUtils {
 
     private static final ModelMapper INSTANCE = new ModelMapper();
+    
+    private DTOUtils() {
+        throw new InstantiationError( "Must not instantiate this class" );
+    }
 
     public static <S, T> T map(S source, Class<T> targetClass) {
         return INSTANCE.map(source, targetClass);
