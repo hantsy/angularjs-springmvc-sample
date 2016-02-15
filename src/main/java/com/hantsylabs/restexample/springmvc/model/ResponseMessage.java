@@ -73,9 +73,9 @@ public class ResponseMessage {
 
     class Error {
 
-        private String code;
-        private String message;
-        private String field;
+        private final String code;
+        private final String message;
+        private final String field;
 
         private Error(String field, String code, String message) {
             this.field = field;
@@ -87,24 +87,12 @@ public class ResponseMessage {
             return code;
         }
 
-        public void setCode(String code) {
-            this.code = code;
-        }
-
         public String getMessage() {
             return message;
         }
 
-        public void setMessage(String message) {
-            this.message = message;
-        }
-
         public String getField() {
             return field;
-        }
-
-        public void setField(String field) {
-            this.field = field;
         }
 
     }
