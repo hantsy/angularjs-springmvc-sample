@@ -46,8 +46,7 @@ public class MockDataConfig {
 
     @Bean
     public CommentRepository commentRepository() {
-        CommentRepository commentRepository = mock(CommentRepository.class);
-        return commentRepository;
+        return mock(CommentRepository.class);
     }
     
     @Bean
