@@ -79,8 +79,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Bean
 	public PlaintextPasswordEncoder passwordEncoder() {
-		PlaintextPasswordEncoder passwordEncoder = new PlaintextPasswordEncoder();
-		return passwordEncoder;
+		return new PlaintextPasswordEncoder();
 	}
 
 }

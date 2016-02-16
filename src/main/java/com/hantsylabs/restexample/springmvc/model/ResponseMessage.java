@@ -17,6 +17,8 @@ public class ResponseMessage {
     private Type type;
     private String text;
     private String code;
+    
+    private List<Error> errors = new ArrayList<Error>();
 
     public ResponseMessage(Type type, String text) {
         this.type = type;
@@ -57,7 +59,6 @@ public class ResponseMessage {
         return new ResponseMessage(Type.info, text);
     }
 
-    private List<Error> errors = new ArrayList<Error>();
 
     public List<Error> getErrors() {
         return errors;

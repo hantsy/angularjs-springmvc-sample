@@ -66,7 +66,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         List<FieldError> fieldErrors = result.getFieldErrors();
 
         if (!fieldErrors.isEmpty()) {
-            fieldErrors.stream().forEach((e) -> {
+            fieldErrors.stream().forEach(e -> {
                 alert.addError(e.getField(), e.getCode(), e.getDefaultMessage());
             });
         }
