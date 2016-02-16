@@ -10,7 +10,7 @@ public class InvalidRequestException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    BindingResult errors;
+    private final BindingResult errors;
 
     public InvalidRequestException(BindingResult errors) {
         this.errors = errors;
