@@ -11,7 +11,7 @@ _I appreciate any contribution for this project, including suggestions, document
 
 **在你提交 ISSUE 前，请务必确认已经严格完成了本文中描述的操作步骤**。
 
-Thanks.
+Thank the DevFactory team member [@misgersameer](https://github.com/misgersameer) for sending several PRs to improve the code quaulity according to the sonar rules.
 
 
 ##Requirements
