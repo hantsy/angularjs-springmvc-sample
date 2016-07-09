@@ -16,12 +16,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <slf4j.version>1.7.21</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
-        <querydsl.version>3.6.4</querydsl.version>
-        <spring-security.version>4.1.0.RELEASE</spring-security.version>
-        <hibernate.version>5.1.0.Final</hibernate.version>
-        <jackson.version>2.7.2</jackson.version>
-        <modelmapper.version>0.7.3</modelmapper.version>
-        <springfox.version>2.4.0</springfox.version>
+        <!--        <querydsl.version>3.6.4</querydsl.version>
+        <spring-security.version>4.1.1.RELEASE</spring-security.version>
+        <hibernate.version>5.1.0.Final</hibernate.version>-->
+<!--        <jackson.version>2.7.2</jackson.version>-->
+        <modelmapper.version>0.7.5</modelmapper.version>
+        <springfox.version>2.5.0</springfox.version>
     </properties>
     <repositories>
 
@@ -68,7 +68,7 @@
             <dependency>
                 <groupId>io.spring.platform</groupId>
                 <artifactId>platform-bom</artifactId>
-                <version>2.0.5.RELEASE</version>
+                <version>2.0.6.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -140,17 +140,14 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
-            <version>${spring-security.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>${spring-security.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>${spring-security.version}</version>
         </dependency>
 
         <!-- Spring Data -->
@@ -198,17 +195,10 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-envers</artifactId>
-            <version>${hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>cglib</groupId>
@@ -225,7 +215,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.2.4.Final</version>
+            <!--            <version>5.2.4.Final</version>-->
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
@@ -358,8 +348,7 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
         </dependency>
-
-        
+    
         <!--webjars static resources-->
         <dependency>
             <groupId>org.webjars</groupId>
