@@ -20,30 +20,30 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {
 		web
             .ignoring()
-			.antMatchers("/**/*.html", //
-                         "/css/**", //
-                         "/js/**", //
-                         "/i18n/**",// 
-                         "/libs/**",//
-                         "/img/**", //
-                         "/webjars/**",//
-                         "/ico/**");
+                    .antMatchers("/**/*.html", //
+                     "/css/**", //
+                     "/js/**", //
+                     "/i18n/**",// 
+                     "/libs/**",//
+                     "/img/**", //
+                     "/webjars/**",//
+                     "/ico/**");
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
             http   
                 .authorizeRequests()   
-    			.antMatchers("/api/ping")
-    			.permitAll()
+                    .antMatchers("/api/ping")
+                    .permitAll()
     		.and()
-                .authorizeRequests()   
-    			.antMatchers("/api/**")
-    			.authenticated()
+                    .authorizeRequests()   
+                    .antMatchers("/api/**")
+                    .authenticated()
     		.and()
-    			.authorizeRequests()   
-    			.anyRequest()
-    			.permitAll()
+                    .authorizeRequests()   
+                    .anyRequest()
+                    .permitAll()
                 .and()
                     .sessionManagement()
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -62,6 +62,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .withUser("admin").password("test123").authorities("ROLE_ADMIN")
                     .and()
                         .withUser("test").password("test123").authorities("ROLE_USER");
+                
+                //auth.userDetailsService(new SimpleUserDetailsServiceImpl(userRepository))
+		//.passwordEncoder(passwordEncoder);
 	}
 
 
