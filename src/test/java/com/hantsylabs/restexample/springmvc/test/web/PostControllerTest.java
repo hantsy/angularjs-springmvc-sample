@@ -108,7 +108,7 @@ public class PostControllerTest {
 
         mvc.perform(get("/api/posts/{id}", post.getId()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType("application/json"))
+                .andExpect(content().contentTypeCompatibleWith("application/json"))
                 .andExpect(jsonPath("$.id").isNumber())
                 .andExpect(jsonPath("$.title", is("My first post")));
 
