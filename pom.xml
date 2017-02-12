@@ -19,7 +19,7 @@
         <!--        <querydsl.version>3.6.4</querydsl.version>
         <spring-security.version>4.1.1.RELEASE</spring-security.version>
         <hibernate.version>5.1.0.Final</hibernate.version>-->
-        <jackson.version>2.7.2</jackson.version>
+        <jackson.version>2.8.6</jackson.version>
         <modelmapper.version>0.7.5</modelmapper.version>
         <springfox.version>2.5.0</springfox.version>
     </properties>
@@ -68,7 +68,7 @@
             <dependency>
                 <groupId>io.spring.platform</groupId>
                 <artifactId>platform-bom</artifactId>
-                <version>Athens-SR1</version>
+                <version>Athens-SR3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -239,7 +239,7 @@
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>javax.mail-api</artifactId>
-            <version>1.5.5</version>
+            <version>1.5.6</version>
         </dependency>
         <dependency>
             <groupId>javax.activation</groupId>
