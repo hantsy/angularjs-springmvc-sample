@@ -7,7 +7,7 @@ An example application using AnguarJS/Bootstrap as frontend and Spring MVC as RE
 
 [![Build Status](https://drone.io/github.com/hantsy/angularjs-springmvc-sample/status.png)](https://drone.io/github.com/hantsy/angularjs-springmvc-sample/latest)
 
-##Contribution
+## Contribution
 
 _I appreciate any contribution for this project, including suggestions, documentation improvements, reporting issues, forks and bugfixs,  etc. I have found there are some unrelated issues added, before you file an issue, please **READ THE STEPS IN THIS README.md**  carefully_.
 
@@ -16,7 +16,7 @@ _I appreciate any contribution for this project, including suggestions, document
 Thank the DevFactory team member [@misgersameer](https://github.com/misgersameer) for sending several PRs to improve the code quaulity according to the sonar rules.
 
 
-##Requirements
+## Requirements
 
    * JDK 8
 
