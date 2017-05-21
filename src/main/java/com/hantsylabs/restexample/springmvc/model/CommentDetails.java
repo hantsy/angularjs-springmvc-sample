@@ -14,7 +14,7 @@ public class CommentDetails implements Serializable {
      *
      */
     private static final long serialVersionUID = 1L;
-
+    private Long id1;
     private Long id;
 
     private String content;
