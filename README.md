@@ -5,6 +5,8 @@ An example application using AnguarJS/Bootstrap as frontend and Spring MVC as RE
 
 **More details about the codes, please read the online GitBook: [Building REST APIs with Spring MVC](https://www.gitbook.com/book/hantsy/build-a-restful-app-with-spring-mvc-and-angularjs/details/).**
 
+> NOTE: This project is under maintainance, no more new features added in future. If you are looking for the new Spring Boot 2 and Angular 5, check [angular-spring-reactive-sample](https://github.com/hantsy/angular-spring-reactive-sample).
+
 [![Build Status](https://drone.io/github.com/hantsy/angularjs-springmvc-sample/status.png)](https://drone.io/github.com/hantsy/angularjs-springmvc-sample/latest)
 
 ## Contribution
