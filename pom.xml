@@ -28,22 +28,22 @@
         <repository>
             <id>jboss-public-repository-group</id>
             <name>JBoss Public Maven Repository Group</name>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
         </repository>
         <repository>
             <id>io.spring.repo.maven.release</id>
-            <url>http://repo.spring.io/release/</url>
+            <url>https://repo.spring.io/release/</url>
         </repository>
 
         <repository>
             <id>io.spring.repo.maven.milestone</id>
-            <url>http://repo.spring.io/milestone/</url>
+            <url>https://repo.spring.io/milestone/</url>
         </repository>
 
         <repository>
             <id>oss-jfrog-artifactory</id>
             <name>oss-jfrog-artifactory-releases</name>
-            <url>http://oss.jfrog.org/artifactory/oss-release-local</url>
+            <url>https://oss.jfrog.org/artifactory/oss-release-local</url>
         </repository>
 
         <repository>
@@ -55,11 +55,11 @@
     <pluginRepositories>
         <pluginRepository>
             <id>io.spring.repo.maven.release</id>
-            <url>http://repo.spring.io/release/</url>
+            <url>https://repo.spring.io/release/</url>
         </pluginRepository>
         <pluginRepository>
             <id>io.spring.repo.maven.milestone</id>
-            <url>http://repo.spring.io/milestone/</url>
+            <url>https://repo.spring.io/milestone/</url>
         </pluginRepository>
     </pluginRepositories>
     <dependencyManagement>
