@@ -19,7 +19,7 @@
         <!--        <querydsl.version>3.6.4</querydsl.version>
         <spring-security.version>4.1.1.RELEASE</spring-security.version>
         <hibernate.version>5.1.0.Final</hibernate.version>-->
-        <jackson.version>2.8.10</jackson.version>
+        <jackson.version>2.11.0</jackson.version>
         <modelmapper.version>0.7.5</modelmapper.version>
         <springfox.version>2.5.0</springfox.version>
     </properties>
