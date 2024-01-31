@@ -1,0 +1,1238 @@
+repo_name: hantsy/angularjs-springmvc-sample
+report_id: eb228611f6c3c8148894f1055118ec99
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T08:12:15+00:00'
+requested_by: hantsy
+provider: github
+branch: master
+detected_tools_count: 69
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  version: '1.8'
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: Repo Metadata
+  last_updated_by: hantsy
+  last_updated_on: 2015-02-17 09:55:44.000000000 Z
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample
+  detection_source: Repo Metadata
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/src/main/resources/import.sql
+  detection_source: src/main/resources/import.sql
+  last_updated_by: hantsy
+  last_updated_on: 2014-06-09 16:37:37.000000000 Z
+- name: Spring Framework
+  description: An application framework and inversion of control container for the
+    Java platform
+  website_url: https://spring.io/projects/spring-framework
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/2006/spring-framework-project-logo.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: jQuery
+  description: The Write Less, Do More, JavaScript Library.
+  website_url: http://jquery.com/
+  version: 2.1.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-07-09 09:20:03.000000000 Z
+- name: H2 Database
+  description: A relational database management system written in Java
+  website_url: http://www.h2database.com/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/3105/h2-logo_square_400x400.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2015-02-17 09:55:44.000000000 Z
+- name: Hibernate
+  description: Idiomatic persistence for Java and relational databases.
+  website_url: http://hibernate.org/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Object Relational Mapper (ORM)
+  image_url: https://img.stackshare.io/service/1756/1uNl_IZX.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-07-09 09:20:03.000000000 Z
+- name: Spring Data
+  description: Provides a consistent approach to data access – relational, non-relational,
+    map-reduce, and beyond
+  website_url: https://spring.io/projects/spring-data
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/7624/IG6D4Ro2_400x400.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample
+  detection_source: Repo Metadata
+- name: JUnit
+  description: A programmer-oriented testing framework for Java
+  website_url: http://junit.org/
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2020/874086.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2014-06-09 16:37:37.000000000 Z
+- name: Log4j
+  description: A Java-based logging utility
+  website_url: https://logging.apache.org/log4j/2.x/
+  version: 1.2.17
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Logging Tools
+  image_url: https://img.stackshare.io/service/2804/Coralogix-log4j-integration.jpg
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2015-02-17 09:55:44.000000000 Z
+- name: Mockito
+  description: Tasty mocking framework for unit tests in Java
+  website_url: https://site.mockito.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2021/4y634TJm_400x400.jpg
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-28 09:34:10.000000000 Z
+- name: SLF4J
+  description: Simple logging facade for Java
+  website_url: http://slf4j.org/
+  open_source: false
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Log Management
+  image_url: https://img.stackshare.io/service/2805/05518ecaa42841e834421e9d6987b04f_400x400.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2014-06-09 16:37:37.000000000 Z
+- name: com.fasterxml.jackson.core:jackson-annotations
+  description: Core annotations used for value types
+  version: 2.8.10
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2018-01-10 13:26:15.000000000 Z
+- name: com.fasterxml.jackson.core:jackson-core
+  description: Core Jackson processing abstractions
+  version: 2.8.10
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2018-01-10 13:26:15.000000000 Z
+- name: com.fasterxml.jackson.core:jackson-databind
+  description: 'General data-binding functionality for Jackson: works on core streaming
+    API'
+  version: 2.8.10
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2018-01-10 13:26:15.000000000 Z
+  vulnerabilities:
+  - name: Arbitrary Code Execution in jackson-databind
+    cve_id: CVE-2018-14718
+    cve_url: https://github.com/advisories/GHSA-645p-88qh-w398
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.3
+  - name: Arbitrary Code Execution in jackson-databind
+    cve_id: CVE-2018-14719
+    cve_url: https://github.com/advisories/GHSA-4gq5-ch57-c2mg
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.3
+  - name: 'FasterXML jackson-databind allows unauthenticated remote code execution '
+    cve_id: CVE-2018-7489
+    cve_url: https://github.com/advisories/GHSA-cggj-fvv3-cqwv
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.1
+  - name: Improper Input Validation in jackson-databind
+    cve_id: CVE-2019-17267
+    cve_url: https://github.com/advisories/GHSA-f3j5-rmmp-3fc5
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.5
+  - name: Polymorphic Typing in FasterXML jackson-databind
+    cve_id: CVE-2019-16942
+    cve_url: https://github.com/advisories/GHSA-mx7p-6679-8g3q
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.9.10.1
+  - name: Deserialization of Untrusted Data in jackson-databind
+    cve_id: CVE-2020-8840
+    cve_url: https://github.com/advisories/GHSA-4w82-r329-3q67
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.5
+  - name: jackson-databind mishandles the interaction between serialization gadgets
+      and typing
+    cve_id: CVE-2020-9548
+    cve_url: https://github.com/advisories/GHSA-p43x-xfjf-5jhr
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.6
+  - name: jackson-databind mishandles the interaction between serialization gadgets
+      and typing
+    cve_id: CVE-2020-9547
+    cve_url: https://github.com/advisories/GHSA-q93h-jc49-78gg
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.6
+  - name: Polymorphic Typing issue in FasterXML jackson-databind
+    cve_id: CVE-2019-14540
+    cve_url: https://github.com/advisories/GHSA-h822-r4r5-v8jg
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.5
+  - name: Polymorphic Typing issue in FasterXML jackson-databind
+    cve_id: CVE-2019-16335
+    cve_url: https://github.com/advisories/GHSA-85cw-hj65-qqv9
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.5
+  - name: XML External Entity Reference (XXE) in jackson-databind
+    cve_id: CVE-2018-14720
+    cve_url: https://github.com/advisories/GHSA-x2w5-5m2g-7h5m
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.3
+  - name: jackson-databind vulnerable to deserialization flaw leading to unauthenticated
+      remote code execution
+    cve_id: CVE-2017-15095
+    cve_url: https://github.com/advisories/GHSA-h592-38cm-4ggp
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11
+  - name: Deserialization of Untrusted Data in jackson-databind
+    cve_id: CVE-2019-20330
+    cve_url: https://github.com/advisories/GHSA-gww7-p5w4-wrfv
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.5
+  - name: Deserialization of Untrusted Data in jackson-databind
+    cve_id: CVE-2018-11307
+    cve_url: https://github.com/advisories/GHSA-qr7j-h6gg-jmgc
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.2
+  - name: jackson-databind vulnerable to remote code execution due to incorrect deserialization
+      and blocklist bypass
+    cve_id: CVE-2017-17485
+    cve_url: https://github.com/advisories/GHSA-rfx6-vp9g-rh7v
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11
+  - name: jackson-databind polymorphic typing issue
+    cve_id: CVE-2019-17531
+    cve_url: https://github.com/advisories/GHSA-gjmw-vf9h-g25v
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.5
+  - name: jackson-databind polymorphic typing issue
+    cve_id: CVE-2019-16943
+    cve_url: https://github.com/advisories/GHSA-fmmc-742q-jg75
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.5
+  - name: Deserialization of untrusted data in FasterXML jackson-databind
+    cve_id: CVE-2019-14379
+    cve_url: https://github.com/advisories/GHSA-6fpp-rgj9-8rwc
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.4
+  - name: Deserialization of Untrusted Data in jackson-databind
+    cve_id: CVE-2018-19361
+    cve_url: https://github.com/advisories/GHSA-mx9v-gmh4-mgqw
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.3
+  - name: Server-Side Request Forgery (SSRF) in jackson-databind
+    cve_id: CVE-2018-14721
+    cve_url: https://github.com/advisories/GHSA-9mxf-g3x6-wv74
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.3
+  - name: Deserialization of Untrusted Data in jackson-databind due to polymorphic
+      deserialization
+    cve_id: CVE-2018-19360
+    cve_url: https://github.com/advisories/GHSA-f9hv-mg5h-xcw9
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 2.8.11.3
+  - name: Deeply nested json in jackson-databind
+    cve_id: CVE-2020-36518
+    cve_url: https://github.com/advisories/GHSA-57j2-w4cx-62h2
+    detected_date: Mar 23
+    severity: high
+    first_patched: 2.12.6.1
+  - name: Deserialization of Untrusted Data in jackson-databind
+    cve_id: CVE-2018-5968
+    cve_url: https://github.com/advisories/GHSA-w3f4-3q6j-rh82
+    detected_date: Aug 22
+    severity: high
+    first_patched: 
+  - name: jackson-databind before 2.9.10.4 vulnerable to unsafe deserialization
+    cve_id: CVE-2020-10650
+    cve_url: https://github.com/advisories/GHSA-rpr3-cw39-3pxh
+    detected_date: Jul 16
+    severity: high
+    first_patched: 2.9.10.4
+  - name: Deserialization of untrusted data in FasterXML jackson-databind
+    cve_id: CVE-2019-14439
+    cve_url: https://github.com/advisories/GHSA-gwp4-hfv6-p7hw
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.8.11.4
+  - name: Deserialization of Untrusted Data in jackson-databind
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-wrr7-33fx-rcvj
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.8.11.2
+  - name: Deserialization of Untrusted Data
+    cve_id: CVE-2018-12023
+    cve_url: https://github.com/advisories/GHSA-6wqp-v4v6-c87c
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.8.11.2
+  - name: Polymorphic deserialization of malicious object in jackson-databind
+    cve_id: CVE-2019-14892
+    cve_url: https://github.com/advisories/GHSA-cf6r-3wgc-h863
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.8.11.5
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-24750
+    cve_url: https://github.com/advisories/GHSA-qjw2-hr98-qgfh
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.6
+  - name: XML External Entity (XXE) Injection in Jackson Databind
+    cve_id: CVE-2020-25649
+    cve_url: https://github.com/advisories/GHSA-288c-cq4h-88gq
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.9.10.7
+  - name: Serialization gadget exploit in jackson-databind
+    cve_id: CVE-2020-35728
+    cve_url: https://github.com/advisories/GHSA-5r5r-6hpj-8gg9
+    detected_date: Nov 22
+    severity: high
+    first_patched: 2.9.10.8
+  - name: jackson-databind mishandles the interaction between serialization gadgets
+      and typing
+    cve_id: CVE-2020-10673
+    cve_url: https://github.com/advisories/GHSA-fqwf-pjwf-7vqv
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.9.10.4
+  - name: jackson-databind Deserialization of Untrusted Data vulnerability
+    cve_id: CVE-2018-12022
+    cve_url: https://github.com/advisories/GHSA-cjjf-94ff-43w7
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.8.11.2
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36181
+    cve_url: https://github.com/advisories/GHSA-cvm9-fjm9-3572
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36186
+    cve_url: https://github.com/advisories/GHSA-v585-23hc-c647
+    detected_date: Jan 18
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Code Injection in jackson-databind
+    cve_id: CVE-2020-24616
+    cve_url: https://github.com/advisories/GHSA-h3cw-g4mq-c5x2
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.6
+  - name: Serialization gadgets exploit in jackson-databind
+    cve_id: CVE-2020-35490
+    cve_url: https://github.com/advisories/GHSA-wh8g-3j2c-rqj5
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Serialization gadgets exploit in jackson-databind
+    cve_id: CVE-2020-35491
+    cve_url: https://github.com/advisories/GHSA-r3gr-cxrf-hg25
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36182
+    cve_url: https://github.com/advisories/GHSA-89qr-369f-5m5x
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36179
+    cve_url: https://github.com/advisories/GHSA-9gph-22xh-8x98
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36185
+    cve_url: https://github.com/advisories/GHSA-8w26-6f25-cm9x
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36180
+    cve_url: https://github.com/advisories/GHSA-8c4j-34r4-xr8g
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36184
+    cve_url: https://github.com/advisories/GHSA-m6x4-97wx-4q27
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36183
+    cve_url: https://github.com/advisories/GHSA-9m6f-7xcq-8vf8
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36188
+    cve_url: https://github.com/advisories/GHSA-f9xh-2qgp-cq57
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36187
+    cve_url: https://github.com/advisories/GHSA-r695-7vr9-jgc2
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Unsafe Deserialization in jackson-databind
+    cve_id: CVE-2020-36189
+    cve_url: https://github.com/advisories/GHSA-vfqx-33qm-g869
+    detected_date: Jan 28
+    severity: high
+    first_patched: 2.9.10.8
+  - name: Information exposure in FasterXML jackson-databind
+    cve_id: CVE-2019-12086
+    cve_url: https://github.com/advisories/GHSA-5ww9-j83m-q7qx
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.9.9
+  - name: Uncontrolled Resource Consumption in FasterXML jackson-databind
+    cve_id: CVE-2022-42004
+    cve_url: https://github.com/advisories/GHSA-rgv9-q543-rqg4
+    detected_date: Oct 5
+    severity: high
+    first_patched: 2.12.7.1
+  - name: High severity vulnerability that affects com.fasterxml.jackson.core:jackson-databind
+    cve_id: CVE-2018-19362
+    cve_url: https://github.com/advisories/GHSA-c8hm-7hpq-7jhg
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.8.11.3
+  - name: Uncontrolled Resource Consumption in Jackson-databind
+    cve_id: CVE-2022-42003
+    cve_url: https://github.com/advisories/GHSA-jjjh-jjxp-wpff
+    detected_date: Oct 5
+    severity: high
+    first_patched: 2.12.7.1
+  - name: Deserialization of untrusted data in jackson-databind
+    cve_id: CVE-2021-20190
+    cve_url: https://github.com/advisories/GHSA-5949-rw7g-wx7w
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.9.10.7
+  - name: Deserialization of Untrusted Data in FasterXML jackson-databind
+    cve_id: CVE-2019-12384
+    cve_url: https://github.com/advisories/GHSA-mph4-vhrx-mv67
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 2.9.9.1
+  - name: Deserialization of untrusted data in FasterXML jackson-databind
+    cve_id: CVE-2019-12814
+    cve_url: https://github.com/advisories/GHSA-cmfg-87vq-g5g4
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 2.9.9.1
+- name: com.h2database:h2
+  description: H2 Database Engine
+  license: MIT-feh
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-01-03 07:43:03.000000000 Z
+- name: com.jayway.jsonpath:json-path
+  description: Java port of Stefan Goessner JsonPath
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-03-02 13:53:33.000000000 Z
+- name: commons-codec:commons-codec
+  description: The Apache Commons Codec package contains simple encoder and decoders
+    for various formats such as Base64 and Hexadecimal
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-02-13 07:41:03.000000000 Z
+- name: commons-dbcp:commons-dbcp
+  description: Commons Database Connection Pooling
+  version: '1.4'
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2015-02-17 09:55:44.000000000 Z
+- name: commons-io:commons-io
+  description: The Apache Commons IO library contains utility classes
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2015-02-17 09:55:44.000000000 Z
+- name: io.springfox:springfox-swagger-ui
+  description: JSON API documentation for spring based applications
+  version: 2.5.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: io.springfox:springfox-swagger2
+  description: JSON API documentation for spring based applications
+  version: 2.5.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: javax.activation:activation
+  description: The JavaBeans
+  version: 1.1.1
+  license: CDDL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-03-02 14:50:45.000000000 Z
+- name: javax.annotation:jsr250-api
+  description: JSR-250 Reference Implementation by Glassfish
+  version: '1.0'
+  license: CDDL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-03-02 14:50:45.000000000 Z
+- name: javax.el:javax.el-api
+  version: 3.0.1
+  license: GPL-2.0-with-classpath-exception
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-01-03 13:17:32.000000000 Z
+- name: javax.inject:javax.inject
+  description: The javax.inject API
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-01-03 13:17:32.000000000 Z
+- name: javax.mail:javax.mail-api
+  version: 1.5.6
+  license: Other
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-01-03 13:17:32.000000000 Z
+- name: javax.servlet:javax.servlet-api
+  description: Java.net - The Source for Java Technology Collaboration
+  version: 3.1.0
+  license: GPL-2.0-with-classpath-exception
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-02-13 07:41:03.000000000 Z
+- name: javax.transaction:javax.transaction-api
+  description: Project GlassFish Java Transaction API
+  version: '1.2'
+  license: GPL-2.0-with-classpath-exception
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-03-02 14:50:45.000000000 Z
+- name: javax.validation:validation-api
+  description: Bean Validation API
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-03-02 14:50:45.000000000 Z
+- name: junit:junit
+  description: JUnit is a unit testing framework for Java
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2015-02-17 09:55:44.000000000 Z
+- name: log4j:log4j
+  description: Apache Log4j 1.2
+  version: 1.2.17
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2015-02-17 09:55:44.000000000 Z
+  vulnerabilities:
+  - name: SQL Injection in Log4j 1.2.x
+    cve_id: CVE-2022-23305
+    cve_url: https://github.com/advisories/GHSA-65fg-84f6-3jq3
+    detected_date: Jan 22
+    severity: critical
+    first_patched: 
+  - name: Deserialization of Untrusted Data in Apache Log4j
+    cve_id: CVE-2022-23307
+    cve_url: https://github.com/advisories/GHSA-f7vh-qwp3-x37m
+    detected_date: Nov 26
+    severity: critical
+    first_patched: 
+  - name: Deserialization of Untrusted Data in Log4j
+    cve_id: CVE-2019-17571
+    cve_url: https://github.com/advisories/GHSA-2qrg-x229-3v8q
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 
+  - name: Deserialization of Untrusted Data in Log4j 1.x
+    cve_id: CVE-2022-23302
+    cve_url: https://github.com/advisories/GHSA-w9p3-5cr8-m3jj
+    detected_date: Jan 22
+    severity: high
+    first_patched: 
+  - name: JMSAppender in Log4j 1.2 is vulnerable to deserialization of untrusted data
+    cve_id: CVE-2021-4104
+    cve_url: https://github.com/advisories/GHSA-fp5r-v3w9-4333
+    detected_date: Dec 15
+    severity: high
+    first_patched: 
+- name: org.apache.commons:commons-lang3
+  description: Apache Commons Lang
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-10 02:44:46.000000000 Z
+- name: org.apache.httpcomponents:httpclient
+  description: Apache HttpComponents Client
+  version: 4.5.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+  vulnerabilities:
+  - name: Cross-site scripting in Apache HttpClient
+    cve_id: CVE-2020-13956
+    cve_url: https://github.com/advisories/GHSA-7r82-7xv7-xcpj
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 4.5.13
+- name: org.aspectj:aspectjrt
+  description: The runtime needed to execute a program using AspectJ
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2018-01-10 13:26:15.000000000 Z
+- name: org.aspectj:aspectjweaver
+  description: The AspectJ weaver introduces advices to java classes
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2018-01-10 13:26:15.000000000 Z
+- name: org.glassfish:javax.el
+  description: Obsolete EL3 fork
+  version: 3.0.1
+  license: GPL-2.0-with-classpath-exception
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-10 02:44:46.000000000 Z
+- name: org.hamcrest:hamcrest-all
+  description: A self-contained hamcrest jar containing all of the sub-modules in
+    a single artifact
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-10 02:44:46.000000000 Z
+- name: org.hibernate.javax.persistence:hibernate-jpa-2.1-api
+  description: Clean-room definition of JPA APIs intended for use in developing Hibernate
+    JPA implementation
+  license: EPL-2.0,AAL
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2018-01-10 13:26:15.000000000 Z
+- name: org.hibernate:hibernate-core
+  description: Hibernate's core ORM functionality
+  license: LGPL-2.0-only,GPL-3.0-or-later
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-07-09 09:20:03.000000000 Z
+- name: org.hibernate:hibernate-entitymanager
+  description: ''
+  license: LGPL-2.0-only,GPL-3.0-or-later
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-07-09 09:20:03.000000000 Z
+- name: org.hibernate:hibernate-validator
+  description: Hibernate's Bean Validation
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-07-09 09:20:03.000000000 Z
+- name: org.mockito:mockito-core
+  description: Mockito mock objects library core API and implementation
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-28 09:34:10.000000000 Z
+- name: org.modelmapper:modelmapper
+  description: Simple, Intelligent, Object Mapping
+  version: 0.7.5
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-07-09 09:20:03.000000000 Z
+- name: org.slf4j:jcl-over-slf4j
+  description: JCL 1.2 implemented over SLF4J
+  version: 1.7.21
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-28 09:34:10.000000000 Z
+- name: org.slf4j:slf4j-api
+  description: The slf4j API
+  version: 1.7.21
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-28 09:34:10.000000000 Z
+- name: org.slf4j:slf4j-log4j12
+  description: SLF4J LOG4J-12 Binding
+  version: 1.7.21
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-28 09:34:10.000000000 Z
+- name: org.springframework.data:spring-data-commons
+  description: Global parent pom.xml to be used by Spring Data modules
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework.data:spring-data-jpa
+  description: Spring Data module for JPA repositories
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework.security:spring-security-config
+  description: Spring-security-config
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework.security:spring-security-core
+  description: Spring-security-core
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework.security:spring-security-web
+  description: Spring-security-web
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-aop
+  description: Spring AOP
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-aspects
+  description: Spring Aspects
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-beans
+  description: Spring Beans
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-context
+  description: Spring Context
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-context-support
+  description: Spring Context Support
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-core
+  description: Spring Core
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-orm
+  description: Spring Object/Relational Mapping
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-test
+  description: Spring TestContext Framework
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-tx
+  description: Spring Transaction
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-web
+  description: Spring Web
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-webmvc
+  description: Spring Web MVC
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.springframework:spring-websocket
+  description: Spring WebSocket
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: Jonathan Leitschuh
+  last_updated_on: 2020-02-11 05:28:49.000000000 Z
+- name: org.webjars:angularjs
+  description: WebJar for AngularJS
+  version: 1.3.14
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-10 02:44:46.000000000 Z
+- name: org.webjars:bootstrap
+  description: WebJar for Bootstrap
+  version: 3.3.6
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-05-10 02:44:46.000000000 Z
+- name: org.webjars:jquery
+  description: WebJar for jQuery
+  version: 2.1.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-springmvc-sample/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2016-07-09 09:20:03.000000000 Z
